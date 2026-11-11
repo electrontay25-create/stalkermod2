@@ -1,0 +1,22 @@
+{
+  "stalker_ambient": {
+    "sounds": [
+      { "name": "stalkermod:stalker_ambient", "stream": true }
+    ]
+  },
+  "stalker_knock": {
+    "sounds": [
+      { "name": "stalkermod:stalker_knock" }
+    ]
+  },
+  "stalker_heavy_knock": {
+    "sounds": [
+      { "name": "stalkermod:stalker_heavy_knock" }
+    ]
+  },
+  "stalker_door_break": {
+    "sounds": [
+      { "name": "stalkermod:stalker_door_break" }
+    ]
+  }
+}
