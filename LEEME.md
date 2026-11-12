@@ -1,30 +1,32 @@
-# Stalker Mod 1.0.2 (Minecraft 1.20.1 · Forge 47.x)
+# Stalker Mod 1.0.3 (Minecraft 1.20.1 · Forge 47.x)
 
-## Qué cambió en la 1.0.2
-- **Ya no es 3D**: el Stalker es un PNG recortado (sin fondo blanco) que siempre mira hacia ti.
-- **Dos formas de asomarse**: (A) figura completa pegada al borde del árbol/pared, (B) cabeza ladeada con un brazo
-  levantado que se agarra de la cobertura. Se elige al azar.
-- **Aparece detrás de cualquier cosa**: troncos, hojas, piedra, paredes y casas, cuevas. Ya no solo en cuevas.
-- **Aparición automática** cada 7 minutos (±20 %): primero se oye un ruido de hojas, y cuando miras, está espiándote.
-- **Se esconde de verdad**: si lo miras ~4 s (o te acercas), se mete detrás de la cobertura y recién ahí desaparece.
-- **Reloj del Stalker**: mantén clic derecho ~1.5 s y se abre la ventana de ajustes
-  (minutos entre apariciones, volumen de la música, segundos que lo miras antes de que se esconda).
-  Lo recibes solo la primera vez que entras al mundo. Receta: reloj + ojo de ender. O `/stalker item`.
-- El evento de la puerta sigue igual (ahora con sprites 2D).
+## Novedades de la 1.0.3
+- **Sonidos de puerta originales de Minecraft** (toques, golpes y puerta rota). Se acabó el sonido feo.
+- **Chillido de presentimiento + música de terror nueva** cuando algo te empieza a observar.
+- **Aparición exacta**: el Stalker solo sale si el borde recto del PNG queda tapado por la cobertura
+  (se comprueba con rayos desde tus ojos). Forma A (figura completa) necesita cobertura de 4+ bloques de alto,
+  forma B (cabeza + brazo) de 2+. Nunca debería verse "recortado" en el aire.
+- **Probabilidades**: Acechar 70 %, Media cabeza 50 %, Puerta 60 % (cuando le toca). Si dice que sí pero no hay
+  dónde esconderse, reintenta cada 2 s hasta 3 minutos.
+- **Nuevo evento "media cabeza"**: oyes el chillido, miras y ves la mitad de la cabeza asomada detrás de un muro,
+  esquina, tronco o borde de cueva (por el costado o por arriba). Si la miras ~8 s desaparece lentamente.
+- **Puerta más flexible**: de día o de noche, no exige techo cerrado (basta estar adentro, cerca de la puerta),
+  busca ventana hasta 4 bloques y, si no hay ventana, igual ocurre solo con sonidos (golpes y puerta rota).
+- **Encadenado**: después del evento de la puerta hay 20 % de que venga otro evento enseguida.
 
 ## Comandos de prueba (necesitan trucos)
-`/stalker stalk` · `/stalker door` · `/stalker item` · `/stalker clear`
+`/stalker stalk` · `/stalker watch` · `/stalker door` · `/stalker item` · `/stalker clear`
 
 ## ACTUALIZAR EN GITHUB (tu repositorio ya existe)
-1. Abre tu repositorio en GitHub (pestaña **Código**).
-2. **Borra la carpeta `src` vieja** (importante, si no se mezclan archivos viejos y falla):
-   entra a `src`, arriba a la derecha toca los tres puntos (⋯) → **Eliminar directorio** → confirmar con **Commit**.
-3. Vuelve al inicio del repositorio → **Agregar archivo → Subir archivos**.
+1. Abre tu repositorio (pestaña **Código**).
+2. **Borra la carpeta `src` vieja**: entra a `src`, toca los tres puntos (⋯) arriba a la derecha → **Eliminar directorio** → Commit.
+3. Inicio del repositorio → **Agregar archivo → Subir archivos**.
 4. Descomprime este zip, entra a la carpeta `stalkermod`, selecciona TODO lo de adentro (Ctrl+A) y arrástralo.
-   (`.github` no hace falta: ya la tienes en el repositorio.)
-5. **Commit changes** y ve a la pestaña **Comportamiento (Actions)**. Espera el ✔ verde (unos 3-5 min).
-6. Entra a esa ejecución → **Artifacts** → descarga `stalkermod-jar` → dentro está `stalkermod-1.0.2.jar`.
-7. En tu carpeta `mods` **borra el .jar viejo** y pon el nuevo.
+   (Sube el CONTENIDO, no el .zip. `.github` no hace falta: ya está.)
+5. **Commit changes** → pestaña **Comportamiento (Actions)** → abre la ejecución MÁS RECIENTE (la de arriba) → ✔ verde (3-5 min).
+6. Baja a **Artifacts** → descarga `stalkermod-jar` → dentro está `stalkermod-1.0.3.jar`.
+7. En tu carpeta `mods` BORRA el .jar viejo y pon el nuevo.
 
 ## Configuración
-`config/stalkermod-common.toml` (también se cambia con el Reloj del Stalker).
+`config/stalkermod-common.toml`: intervalos, probabilidades, distancias, segundos de mirada, solo de noche, etc.
+Intervalo, volumen y segundos del acecho también se cambian con el Reloj del Stalker.

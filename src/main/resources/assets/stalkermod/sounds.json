@@ -1,0 +1,12 @@
+{
+  "stalker_ambient": {
+    "sounds": [
+      { "name": "stalkermod:stalker_ambient", "stream": true }
+    ]
+  },
+  "stalker_screech": {
+    "sounds": [
+      { "name": "stalkermod:stalker_screech" }
+    ]
+  }
+}
