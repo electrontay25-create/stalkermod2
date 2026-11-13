@@ -1,32 +1,32 @@
-# Stalker Mod 1.0.3 (Minecraft 1.20.1 · Forge 47.x)
+# Stalker Mod 1.0.4 (Minecraft 1.20.1 · Forge 47.x)
 
-## Novedades de la 1.0.3
-- **Sonidos de puerta originales de Minecraft** (toques, golpes y puerta rota). Se acabó el sonido feo.
-- **Chillido de presentimiento + música de terror nueva** cuando algo te empieza a observar.
-- **Aparición exacta**: el Stalker solo sale si el borde recto del PNG queda tapado por la cobertura
-  (se comprueba con rayos desde tus ojos). Forma A (figura completa) necesita cobertura de 4+ bloques de alto,
-  forma B (cabeza + brazo) de 2+. Nunca debería verse "recortado" en el aire.
-- **Probabilidades**: Acechar 70 %, Media cabeza 50 %, Puerta 60 % (cuando le toca). Si dice que sí pero no hay
-  dónde esconderse, reintenta cada 2 s hasta 3 minutos.
-- **Nuevo evento "media cabeza"**: oyes el chillido, miras y ves la mitad de la cabeza asomada detrás de un muro,
-  esquina, tronco o borde de cueva (por el costado o por arriba). Si la miras ~8 s desaparece lentamente.
-- **Puerta más flexible**: de día o de noche, no exige techo cerrado (basta estar adentro, cerca de la puerta),
-  busca ventana hasta 4 bloques y, si no hay ventana, igual ocurre solo con sonidos (golpes y puerta rota).
-- **Encadenado**: después del evento de la puerta hay 20 % de que venga otro evento enseguida.
+## Novedades de la 1.0.4
+- **Sonido de terror ligado al Stalker**: suena en bucle SOLO mientras el Stalker te observa; baja mientras se esconde
+  y se corta cuando desaparece. (Sustituye al chillido y a la música anteriores.)
+  El archivo es `src/main/resources/assets/stalkermod/sounds/stalker_stare.ogg` (por ahora lleva un sonido de relleno).
+- **Evento "asomado" rehecho**: ya no es media cabeza. Usa el PNG nuevo (cabeza + brazo levantado + cuerpo, recortado
+  desde tu imagen en alta resolución). Se asoma por el borde de una pared/esquina, y si lo miras ~8 s se esconde
+  DESLIZÁNDOSE lentamente detrás del muro (el brazo también se mete detrás). Solo se desvanece al final, cuando ya casi está tapado.
+- **Pasillos y cuevas**: este evento solo sale cuando estás bajo techo (pasillo, cueva, casa) y se asoma a 5-18 bloques.
+- **Mismo control de escondite exacto** que el acecho: solo aparece si el borde recto del PNG queda tapado.
+- **Eventos naturales**: Acechar cada ~7 min (70 %), Asomado cada ~6 min (50 %), Puerta cada ~10 min (60 %).
+  Si la probabilidad no sale, vuelve a tirar el dado a los ~2 min (antes esperaba el intervalo completo).
+- **`/stalker status`** muestra cuánto falta para cada evento automático. En `logs/latest.log` aparecen líneas
+  `[Stalker] ...` que dicen cuándo le toca a cada evento y si encontró lugar.
 
-## Comandos de prueba (necesitan trucos)
-`/stalker stalk` · `/stalker watch` · `/stalker door` · `/stalker item` · `/stalker clear`
+## Comandos (necesitan trucos)
+`/stalker stalk` · `/stalker watch` · `/stalker door` · `/stalker status` · `/stalker item` · `/stalker clear`
 
 ## ACTUALIZAR EN GITHUB (tu repositorio ya existe)
 1. Abre tu repositorio (pestaña **Código**).
 2. **Borra la carpeta `src` vieja**: entra a `src`, toca los tres puntos (⋯) arriba a la derecha → **Eliminar directorio** → Commit.
 3. Inicio del repositorio → **Agregar archivo → Subir archivos**.
 4. Descomprime este zip, entra a la carpeta `stalkermod`, selecciona TODO lo de adentro (Ctrl+A) y arrástralo.
-   (Sube el CONTENIDO, no el .zip. `.github` no hace falta: ya está.)
-5. **Commit changes** → pestaña **Comportamiento (Actions)** → abre la ejecución MÁS RECIENTE (la de arriba) → ✔ verde (3-5 min).
-6. Baja a **Artifacts** → descarga `stalkermod-jar` → dentro está `stalkermod-1.0.3.jar`.
+   (Sube el CONTENIDO, no el .zip.)
+5. **Commit changes** → pestaña **Comportamiento (Actions)** → abre la ejecución MÁS RECIENTE (la de arriba) → ✔ verde.
+6. Baja a **Artifacts** → descarga `stalkermod-jar` → dentro está `stalkermod-1.0.4.jar`.
 7. En tu carpeta `mods` BORRA el .jar viejo y pon el nuevo.
 
-## Configuración
-`config/stalkermod-common.toml`: intervalos, probabilidades, distancias, segundos de mirada, solo de noche, etc.
-Intervalo, volumen y segundos del acecho también se cambian con el Reloj del Stalker.
+## Cambiar el sonido por tu audio
+Hay que convertirlo a **.ogg (Vorbis, mono)** y reemplazar `stalker_stare.ogg` (mismo nombre) en
+`src/main/resources/assets/stalkermod/sounds/` del repositorio; GitHub recompila solo.
