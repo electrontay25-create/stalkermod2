@@ -1,0 +1,7 @@
+{
+  "stalker_stare": {
+    "sounds": [
+      { "name": "stalkermod:stalker_stare", "stream": true }
+    ]
+  }
+}

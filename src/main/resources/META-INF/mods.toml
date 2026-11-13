@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="stalkermod"
+version="1.0.5"
+displayName="Stalker Mod"
+description='''
+Entidad de terror "Stalker". Te acecha detras de arboles y paredes, y toca a tu puerta.
+Nunca ataca directamente.
+'''
+
+[[dependencies.stalkermod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.stalkermod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"

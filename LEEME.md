@@ -1,9 +1,14 @@
-# Stalker Mod 1.0.4 (Minecraft 1.20.1 · Forge 47.x)
+# Stalker Mod 1.0.5 (Minecraft 1.20.1 · Forge 47.x)
 
-## Novedades de la 1.0.4
+## Novedad de la 1.0.5
+- Solo cambia el sonido: ahora el Stalker usa tu audio (`spy_stalker_green_screen`, 8.4 s, en bucle).
+  Suena mientras el Stalker te espía y se corta cuando se esconde o desaparece.
+  Lo convertí a .ogg y le subí el volumen (el original sonaba muy bajo).
+
+## Novedades de la 1.0.4 (se mantienen)
 - **Sonido de terror ligado al Stalker**: suena en bucle SOLO mientras el Stalker te observa; baja mientras se esconde
   y se corta cuando desaparece. (Sustituye al chillido y a la música anteriores.)
-  El archivo es `src/main/resources/assets/stalkermod/sounds/stalker_stare.ogg` (por ahora lleva un sonido de relleno).
+  El archivo es `src/main/resources/assets/stalkermod/sounds/stalker_stare.ogg` (ahora lleva tu audio).
 - **Evento "asomado" rehecho**: ya no es media cabeza. Usa el PNG nuevo (cabeza + brazo levantado + cuerpo, recortado
   desde tu imagen en alta resolución). Se asoma por el borde de una pared/esquina, y si lo miras ~8 s se esconde
   DESLIZÁNDOSE lentamente detrás del muro (el brazo también se mete detrás). Solo se desvanece al final, cuando ya casi está tapado.
