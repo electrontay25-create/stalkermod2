@@ -1,6 +1,19 @@
-# Stalker Mod 1.1.0 (Minecraft 1.20.1 · Forge 47.x)
+# Stalker Mod 1.2.0 (Minecraft 1.20.1 · Forge 47.x)
 
-## Novedad de la 1.1.0: el TORMENTOR
+## Novedad de la 1.2.0: ANDERDINGUS (el unico que MATA)
+Lo anterior sigue igual. Evento nuevo:
+1. Aparece **dormido** (la pose de pie) a 14-24 bloques, en terreno abierto, un poco hacia un lado de donde miras. No suena nada.
+2. Si lo **miras 3 segundos** (o te acercas a menos de 4 bloques) se **despierta**: se reproduce la animacion del video
+   (fundidos entre poses hasta la forma roja furiosa) y **desde ahi empieza la cancion**.
+3. Despues te **persigue**. Su velocidad sigue el **ritmo de la cancion** (analizada del audio): empieza lento (~3.2 bloques/s)
+   y va cada vez mas rapido hasta ~8.5, con un pequeno impulso en cada golpe de ritmo. (Correr = 5.6 bloques/s.)
+4. Si te alcanza, **te mata de un golpe** (tambien en creativo y aunque tengas totem) y desaparece.
+   Si termina la cancion (56 s) sin alcanzarte, desaparece. La musica se corta cuando el desaparece.
+- Frecuencia (config `anderdingus`): cada ~20 min con 40 % de probabilidad. Velocidades, segundos de mirada y volumen tambien.
+- Comando de prueba: `/stalker anderdingus` (OJO: si te alcanza, mueres). Para quitarlo: `/stalker clear`.
+- La animacion salio de tu video: recortada sin fondo, sin marcas de TikTok y **sin los subtitulos** ("STOP LOOKING AT... TIME!!!").
+
+## Novedad de la 1.1.0 (se mantiene): el TORMENTOR
 Evento nuevo (lo anterior sigue igual): una criatura golpea tu ventana cada vez mas fuerte hasta romperla.
 - **Animacion**: los 9 segundos del video (108 cuadros, 12 por segundo), recortados sin fondo blanco y sin la marca de TikTok
   (se conservan las grietas del vidrio). Se ve como un cartel del tamano de ~2.7 bloques pegado a la ventana, por fuera.
@@ -33,7 +46,7 @@ Evento nuevo (lo anterior sigue igual): una criatura golpea tu ventana cada vez 
   `[Stalker] ...` que dicen cuándo le toca a cada evento y si encontró lugar.
 
 ## Comandos (necesitan trucos)
-`/stalker stalk` · `/stalker watch` · `/stalker door` · `/stalker tormentor` · `/stalker status` · `/stalker item` · `/stalker clear`
+`/stalker stalk` · `/stalker watch` · `/stalker door` · `/stalker tormentor` · `/stalker anderdingus` · `/stalker status` · `/stalker item` · `/stalker clear`
 
 ## ACTUALIZAR EN GITHUB (tu repositorio ya existe)
 1. Abre tu repositorio (pestaña **Código**).
@@ -42,7 +55,7 @@ Evento nuevo (lo anterior sigue igual): una criatura golpea tu ventana cada vez 
 4. Descomprime este zip, entra a la carpeta `stalkermod`, selecciona TODO lo de adentro (Ctrl+A) y arrástralo.
    (Sube el CONTENIDO, no el .zip.)
 5. **Commit changes** → pestaña **Comportamiento (Actions)** → abre la ejecución MÁS RECIENTE (la de arriba) → ✔ verde.
-6. Baja a **Artifacts** → descarga `stalkermod-jar` → dentro está `stalkermod-1.1.0.jar`.
+6. Baja a **Artifacts** → descarga `stalkermod-jar` → dentro está `stalkermod-1.2.0.jar`.
 7. En tu carpeta `mods` BORRA el .jar viejo y pon el nuevo.
 
 ## Cambiar el sonido por tu audio

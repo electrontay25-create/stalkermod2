@@ -1,0 +1,25 @@
+{
+  "stalker_stare": {
+    "sounds": [
+      {
+        "name": "stalkermod:stalker_stare",
+        "stream": true
+      }
+    ]
+  },
+  "tormentor_attack": {
+    "sounds": [
+      {
+        "name": "stalkermod:tormentor_attack"
+      }
+    ]
+  },
+  "anderdingus_song": {
+    "sounds": [
+      {
+        "name": "stalkermod:anderdingus_song",
+        "stream": true
+      }
+    ]
+  }
+}
